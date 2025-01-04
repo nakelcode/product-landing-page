@@ -1,0 +1,154 @@
+body{
+    background-color: #020101;
+    color: rgb(244, 240, 240);
+    width: 100%;
+    font-size: 18px;
+    margin: 0;
+    font-family: "DM Sans", monospace;
+}
+.loading{
+    width: 50px;
+    height: 10px;
+    background-color: rgb(244, 240, 240);
+    margin: 15px;
+}
+h1{
+    font-family: "Orbitron", serif;
+    font-size: 30px;
+}
+h2{
+    font-family: "Syncopate", sans-serif;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.logo{
+    width: 110px;
+    animation-name: apple;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    background-color: #020101;
+    color: rgb(244, 240, 240);
+}
+.mobile-image{
+    width: 400px;
+    min-height: 100px;
+    animation-name: vision;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+
+}
+.desktop-image{
+    display: none;
+}
+.youtube-link{
+    text-decoration: none;
+    color: rgb(244, 240, 240);
+    border: 1px solid rgb(244, 240, 240);
+    padding: 7px;
+    border-radius: 10px;
+}
+.youtube-link:active{
+    background-color: rgb(244, 240, 240);
+    color: #020101;
+}
+.main-content{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.main-content h2{
+    text-align: center;
+}
+.main-content p{
+    text-align: justify;
+}
+@keyframes apple {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes vision {
+    0%{
+        opacity: 0;
+        transform: translateX(0);
+    }
+    30%{
+        opacity: 0;
+        transform: translateX(0);
+    }
+    70%{
+        display: block;
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+@media screen and (min-width: 1440px) {
+    .mobile-image{
+        display: none;
+    }
+    .desktop-image{
+        display: block;
+        animation-name: vision;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+        min-width: 100px;
+        min-height: 100px;
+    }
+    @keyframes vision {
+        0%{
+            opacity: 0;
+            transform: translateX(0);
+        }
+        30%{
+            opacity: 0;
+            transform: translateX(0);
+        }
+        70%{
+            display: block;
+        }
+        100%{
+            transform: translateX(-10px);
+        }
+    }
+}
+.inputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+input[type="email"]{
+    font-size: 16px;
+    border-color: white;
+    border-radius: 5px 0 0 5px;
+    font-family: "DM Sans", monospace;
+    color: #020101;
+}    
+#submit{
+    border-radius: 0 5px 5px 0;
+    background-color: rgb(244, 240, 240);
+    color: #020101;
+    font-family: "DM Sans", monospace;
+}
+footer{
+    margin: 5px;
+}
